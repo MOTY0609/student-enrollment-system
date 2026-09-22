@@ -1,0 +1,30 @@
+{% extends 'students/base.html' %}
+
+{% block title %}All Students{% endblock %}
+
+{% block content %}
+<h2>Below are the names of our Registered Students.</h2>
+<h2>Register if you have not</h2>
+<table class="student-table">
+    <tr>
+        <th>Name</th>
+        <th>Email</th>
+        <th>Course</th>
+        <th>Registered On</th>
+    </tr>
+    {% for student in students %}
+    <tr>
+        <td>{{ student.full_name }}</td>
+        <td>{{ student.email }}</td>
+        <td>{{ student.get_course_display }}</td>
+        <td>{{ student.registration_date|date:"M d, Y" }}</td>
+    </tr>
+    {% empty %}
+    <tr><td colspan="5">No students registered yet.</td></tr>
+    {% endfor %}
+</table>
+<nav>
+    <a href="{% url 'register_student'%}">Enroll</a>
+    <a href="{%url 'home_page'%}">Go Home</a>
+</nav>
+{% endblock %}

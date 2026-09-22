@@ -1,0 +1,15 @@
+{% extends 'students/base.html'%}
+{% block title %}Enrollment Home{% endblock title%}
+
+{% block content %}
+<h1>MOTY Students Scholarship Initiative</h1>
+<h2>Welcome to the official website of the MOTY Scholarship initiative.</h2>
+<p class="eligibility-note">To be eligible for enrollment, you need to have an account</p>
+
+<nav class="sign-up">
+    <a href="{% url 'sign_up'%}">Create Account</a>
+</nav>
+<nav class="login">
+    <a href="{% url 'login'%}">Login</a>
+</nav>
+{% endblock content %}

@@ -1,0 +1,199 @@
+.eligibility-note {
+  font-size: 1rem;
+  font-weight: normal;
+  color: var(--color-text-muted);
+  margin-bottom: var(--space-5);
+}
+
+/* ===== Design tokens ===== */
+:root {
+  --color-bg: #f4f6f8;
+  --color-text: #1a1a1a;
+  --color-text-muted: #5a6069;
+  --color-primary: #2563eb;
+  --color-primary-hover: #1d4ed8;
+  --color-card-bg: rgba(255, 255, 255, 0.92);
+
+  --space-2: 8px;
+  --space-3: 16px;
+  --space-4: 24px;
+  --space-5: 32px;
+  --space-6: 48px;
+}
+
+/* ===== Base ===== */
+body {
+  font-family: 'Segoe UI', Arial, sans-serif;
+  color: var(--color-text);
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ===== Content card ===== */
+main.content {
+  background-color: var(--color-card-bg);
+  padding: var(--space-6);
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+  max-width: 600px;
+  text-align: center;
+}
+
+h1 {
+  font-size: 2rem;
+  margin-bottom: var(--space-2);
+  color: var(--color-primary);
+}
+
+h2 {
+  font-size: 1.25rem;
+  font-weight: 500;
+  color: var(--color-text);
+  margin-bottom: var(--space-3);
+}
+
+/* ===== Nav / buttons ===== */
+nav {
+  display: inline-block;
+  margin: 0 var(--space-2) var(--space-3);
+}
+
+nav a {
+  display: inline-block;
+  padding: var(--space-2) var(--space-4);
+  background-color: var(--color-primary);
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+  border-radius: 6px;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+nav a:hover {
+  background-color: var(--color-primary-hover);
+  transform: translateY(-2px);
+}
+
+nav.login a {
+  background-color: transparent;
+  color: var(--color-primary);
+  border: 2px solid var(--color-primary);
+}
+
+nav.login a:hover {
+  background-color: var(--color-primary);
+  color: white;
+}
+
+/* ===== Auth form (sign up / login) ===== */
+.auth-form {
+  text-align: left;
+  max-width: 380px;
+  margin: 0 auto;
+}
+
+.auth-form p {
+  margin-bottom: var(--space-4);
+}
+
+.auth-form label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: var(--space-2);
+  color: var(--color-text);
+}
+
+.auth-form input {
+  width: 100%;
+  padding: var(--space-2) var(--space-3);
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+  font-size: 1rem;
+  box-sizing: border-box;
+  transition: border-color 0.2s ease;
+}
+
+.auth-form input:focus {
+  outline: none;
+  border-color: var(--color-primary);
+}
+
+.auth-form ul {
+  list-style: none;
+  padding: 0;
+  margin: var(--space-2) 0 0;
+  font-size: 0.85rem;
+  color: var(--color-text-muted);
+}
+
+.auth-form button[type="submit"] {
+  width: 100%;
+  padding: var(--space-3);
+  background-color: var(--color-primary);
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.auth-form button[type="submit"]:hover {
+  background-color: var(--color-primary-hover);
+}
+
+/* ===== Student table ===== */
+.student-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: var(--space-4) 0 var(--space-5);
+  font-size: 0.95rem;
+}
+.student-table th,
+.student-table td {
+  padding: var(--space-2) var(--space-3);
+  text-align: left;
+  border-bottom: 1px solid #d1d5db;
+}
+.student-table th {
+  background-color: var(--color-bg);
+  font-weight: 600;
+  color: var(--color-text);
+}
+.student-table tr:hover {
+  background-color: #f9fafb;
+}
+.student-table a {
+  color: var(--color-primary);
+  text-decoration: none;
+  margin-right: var(--space-2);
+  font-weight: 600;
+}
+.student-table a:hover {
+  text-decoration: underline;
+}
+main.content.wide {
+  max-width: 900px;
+}
+
+.auth-form select,
+.auth-form input[type="date"] {
+  width: 100%;
+  padding: var(--space-2) var(--space-3);
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+  font-size: 1rem;
+  box-sizing: border-box;
+  background-color: white;
+  font-family: inherit;
+}
+
+.auth-form select:focus,
+.auth-form input[type="date"]:focus {
+  outline: none;
+  border-color: var(--color-primary);
+}

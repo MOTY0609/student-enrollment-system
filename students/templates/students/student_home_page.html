@@ -1,0 +1,11 @@
+{% extends 'students/base.html' %}
+{% block title %}Student Page{% endblock %}
+
+{% block content %}
+<h1>{{ user }}, Your Account Has Been Created Successfully!</h1>
+<h2>Register for enrollment below, if you have not</h2>
+<nav>
+    <a href="{% url 'student_list' %}">Enrolled Students</a>
+    <a href="{% url 'register_student' %}">Enroll</a>
+</nav>
+{% endblock %}

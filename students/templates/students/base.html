@@ -1,0 +1,20 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{% block title %}Student Enrollment System{% endblock %}</title>
+    <link rel="stylesheet" href='{% static "students/style.css" %}'>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    <main class="content">
+        {% block content %}
+        <h1>Welcome to the official enrollment website!</h1>
+        <nav>
+            <a href="{% url 'sign_up'%}">Create Account</a>
+            <a href="{%url 'login'%}">Login to your account</a>
+        </nav>
+        {% endblock %}
+    </main>
+</body>
+</html>
