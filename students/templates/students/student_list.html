@@ -5,6 +5,7 @@
 {% block content %}
 <h2>Below are the names of our Registered Students.</h2>
 <h2>Register if you have not</h2>
+<div class="table-scroll">
 <table class="student-table">
     <tr>
         <th>Name</th>
@@ -23,6 +24,7 @@
     <tr><td colspan="5">No students registered yet.</td></tr>
     {% endfor %}
 </table>
+</div>
 <nav>
     <a href="{% url 'register_student'%}">Enroll</a>
     <a href="{%url 'home_page'%}">Go Home</a>

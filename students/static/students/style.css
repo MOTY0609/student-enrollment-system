@@ -147,6 +147,11 @@ nav.login a:hover {
 }
 
 /* ===== Student table ===== */
+.table-scroll{
+  width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
 .student-table {
   width: 100%;
   border-collapse: collapse;
